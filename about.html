@@ -3,62 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About • Gloves Up Boxing Gym</title>
+  <title>About Us • Gloves Up Boxing Gym</title>
   <link rel="icon" href="./assets/icon.jpg">
-  <style>
-    :root{
-      --bg:#111; --ink:#f4f4f4; --muted:#e6e6e6; --accent:#f6a79a;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --content-w:1100px;
-    }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
-    .wrap{ width:min(var(--content-w),96vw); margin:0 auto; }
+<link rel="stylesheet" href="styles.css">
 
-    /* Banner */
-    .topbar{ padding:24px 0 8px; }
-    .header-banner{ width:100%; height:auto; display:block; border-radius:12px; box-shadow:var(--shadow); }
-
-    /* Nav */
-    .nav{ background:var(--accent); position:sticky; top:0; z-index:5; }
-    .nav__inner{ width:min(var(--content-w),96vw); margin:0 auto; }
-    .nav__toggle{ display:none; }
-    .nav__list{
-      list-style:none; margin:0; padding:12px 0;
-      display:flex; flex-wrap:wrap; justify-content:space-evenly; align-items:center;
-    }
-    .nav__list a{
-      display:block; padding:10px 8px; color:#1c1c1c; text-decoration:none; font-weight:800; letter-spacing:.2px;
-    }
-
-    /* Page content */
-    main{ padding:28px 0 60px; }
-    main h1{ margin:0 0 12px; }
-    main p{ color:var(--muted); line-height:1.6; }
-
-    @media (max-width:720px){
-      .nav__toggle{ display:inline-block; background:transparent; border:0; font-size:24px; padding:12px }
-      .nav__list{ display:none; flex-direction:column; gap:14px; padding:10px 0; }
-      .nav.open .nav__list{ display:flex; }
-    }
-  </style>
-</head>
-<body>
 
   <!-- Banner -->
   <header class="topbar">
     <div class="wrap">
-      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym header">
+      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner">
     </div>
   </header>
 
-  <!-- Nav (same on every page) -->
+  <!-- Nav -->
   <nav class="nav">
     <div class="nav__inner">
       <button class="nav__toggle" aria-label="Toggle menu">☰</button>
       <ul class="nav__list">
         <li><a href="./home.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./about.html" aria-current="page">About Us</a></li>
         <li><a href="./schedules.html">Schedules</a></li>
         <li><a href="./join.html">Join Us</a></li>
         <li><a href="./donate.html">Donate</a></li>
@@ -68,14 +31,45 @@
     </div>
   </nav>
 
-  <!-- Page content -->
-  <main class="wrap">
+  <!-- Hero -->
+  <section class="hero">
     <h1>About Us</h1>
-    <p>Write your page content here.</p>
-  </main>
+  </section>
+
+  <!-- Our Story -->
+  <section>
+    <h2>Our Story</h2>
+    <p>Gloves Up Boxing Gym began in Cape Town in 2015 when a small group of five boxers and community coaches came together with one vision: to transform their painful pasts into a future of hope for the next generation. Many had grown up without father figures, in homes weighed down by poverty and violence. Some shouldered the role of parents for their siblings, while others—like Kelvin, the lead founder—faced the harsh realities of gang life and even time in juvenile prison. Instead of letting those experiences define them, they chose to build a safe haven for children to find strength, discipline, and mentorship:contentReference[oaicite:1]{index=1}.</p>
+  </section>
+
+  <!-- Mission -->
+  <section>
+    <h2>Our Mission</h2>
+    <p>We exist to protect young people from the cycle of violence, gang recruitment, and substance abuse that too often claims their potential. Through boxing and mentorship, we provide a place to belong, a path to self-belief, and the tools to grow into responsible, resilient adults. Every class is about more than punches—it’s about discipline, teamwork, and self-respect:contentReference[oaicite:2]{index=2}.</p>
+  </section>
+
+  <!-- Vision -->
+  <section>
+    <h2>Our Vision</h2>
+    <p>Our vision is to create a network of youth boxing hubs across Cape Town, each one becoming a beacon of safety and transformation. We believe in building communities one child at a time, showing that with guidance and opportunity, tomorrow can look very different from yesterday:contentReference[oaicite:3]{index=3}.</p>
+  </section>
+
+  <!-- Founders -->
+  <section>
+    <h2>Meet the Founders</h2>
+    <div class="founders wrap">
+      <div class="founder-card">
+        <h3>Kelvin</h3>
+        <p>Once caught in the pull of gangs and juvenile detention, Kelvin turned his hardships into purpose. Today, he leads Gloves Up with passion, showing children that they can rise above their circumstances.</p>
+      </div>
+      <div class="founder-card">
+        <h3>The Team</h3>
+        <p>Alongside Kelvin stand four other coaches, each shaped by difficult beginnings. Together, they mentor, coach, and protect, committed to ensuring that no child feels alone in their struggle.</p>
+      </div>
+    </div>
+  </section>
 
   <script>
-    // mobile menu toggle
     const nav = document.querySelector('.nav');
     const toggle = document.querySelector('.nav__toggle');
     if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));

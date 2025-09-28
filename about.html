@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us • Gloves Up Boxing Gym</title>
   <link rel="icon" href="./assets/icon.jpg">
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<!-- Banner -->
+<header class="topbar">
+  <div class="wrap">
+    <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner">
+  </div>
+</header>
 
-
-  <!-- Banner -->
-  <header class="topbar">
-    <div class="wrap">
-      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner">
-    </div>
-  </header>
-
-  <!-- Nav -->
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner">
       <button class="nav__toggle" aria-label="Toggle menu">☰</button>
@@ -31,45 +32,65 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>About Us</h1>
+  <!-- HERO -->
+  <section class="hero hero--about">
+    <h1 class="hero__title">About Gloves Up</h1>
   </section>
 
-  <!-- Our Story -->
-  <section>
-    <h2>Our Story</h2>
-    <p>Gloves Up Boxing Gym began in Cape Town in 2015 when a small group of five boxers and community coaches came together with one vision: to transform their painful pasts into a future of hope for the next generation. Many had grown up without father figures, in homes weighed down by poverty and violence. Some shouldered the role of parents for their siblings, while others—like Kelvin, the lead founder—faced the harsh realities of gang life and even time in juvenile prison. Instead of letting those experiences define them, they chose to build a safe haven for children to find strength, discipline, and mentorship:contentReference[oaicite:1]{index=1}.</p>
-  </section>
+  <main class="wrap">
+    <!-- Mission -->
+    <section>
+      <h2>Our Mission</h2>
+      <p>
+        Gloves Up Boxing Gym was founded to provide a safe haven for young people in vulnerable
+        communities. What started as a small initiative to keep kids off the streets has grown into a
+        movement of mentorship, discipline, and empowerment. Through boxing, we teach life skills,
+        resilience, and self-belief.
+      </p>
+    </section>
 
-  <!-- Mission -->
-  <section>
-    <h2>Our Mission</h2>
-    <p>We exist to protect young people from the cycle of violence, gang recruitment, and substance abuse that too often claims their potential. Through boxing and mentorship, we provide a place to belong, a path to self-belief, and the tools to grow into responsible, resilient adults. Every class is about more than punches—it’s about discipline, teamwork, and self-respect:contentReference[oaicite:2]{index=2}.</p>
-  </section>
+    <!-- Vision -->
+    <section>
+      <h2>Our Vision</h2>
+      <p>
+        Our vision is to create a network of youth boxing hubs across Cape Town, each one becoming a
+        beacon of safety and transformation. We believe in building communities one child at a time,
+        showing that with guidance and opportunity, tomorrow can look very different from yesterday.
+      </p>
+    </section>
 
-  <!-- Vision -->
-  <section>
-    <h2>Our Vision</h2>
-    <p>Our vision is to create a network of youth boxing hubs across Cape Town, each one becoming a beacon of safety and transformation. We believe in building communities one child at a time, showing that with guidance and opportunity, tomorrow can look very different from yesterday:contentReference[oaicite:3]{index=3}.</p>
-  </section>
+    <!-- Founders -->
+    <section>
+      <h2>Meet the Founders</h2>
 
-  <!-- Founders -->
-  <section>
-    <h2>Meet the Founders</h2>
-    <div class="founders wrap">
-      <div class="founder-card">
-        <h3>Kelvin</h3>
-        <p>Once caught in the pull of gangs and juvenile detention, Kelvin turned his hardships into purpose. Today, he leads Gloves Up with passion, showing children that they can rise above their circumstances.</p>
+      <div class="founders">
+        <!-- Kelvin -->
+        <article class="founder-card">
+          <img src="./assets/coach.jpg" alt="Kelvin seated in the boxing ring">
+          <h3>Kelvin</h3>
+          <p>
+            Once caught in the pull of gangs and juvenile detention, Kelvin turned his hardships into
+            purpose. Today, he leads Gloves Up with passion, showing children that they can rise above
+            their circumstances.
+          </p>
+        </article>
+
+        <!-- Team -->
+        <article class="founder-card">
+          <img src="./assets/team.jpg" alt="Coaching team inside the gym">
+          <h3>The Team</h3>
+          <p>
+            Alongside Kelvin stand four other coaches, each shaped by difficult beginnings. Together,
+            they mentor, coach, and protect, committed to ensuring that no child feels alone in their
+            struggle.
+          </p>
+        </article>
       </div>
-      <div class="founder-card">
-        <h3>The Team</h3>
-        <p>Alongside Kelvin stand four other coaches, each shaped by difficult beginnings. Together, they mentor, coach, and protect, committed to ensuring that no child feels alone in their struggle.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <script>
+    // Mobile nav toggle
     const nav = document.querySelector('.nav');
     const toggle = document.querySelector('.nav__toggle');
     if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));

@@ -5,88 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Schedules • Gloves Up Boxing Gym</title>
   <link rel="icon" href="./assets/icon.jpg">
-  <style>
-    :root{
-      --bg:#111; --ink:#f4f4f4; --muted:#e6e6e6; --accent:#f6a79a;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --content-w:1100px;
-      --table-head:#000; --table-row:#1c1c1c;
-    }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
-    .wrap{ width:min(var(--content-w),96vw); margin:0 auto; }
-
-    /* Banner */
-    .topbar{ padding:24px 0 8px; }
-    .header-banner{ width:100%; height:auto; display:block; border-radius:12px; box-shadow:var(--shadow); }
-
-    /* Nav */
-    .nav{ background:var(--accent); position:sticky; top:0; z-index:5; }
-    .nav__inner{ width:min(var(--content-w),96vw); margin:0 auto; }
-    .nav__toggle{ display:none; }
-    .nav__list{
-      list-style:none; margin:0; padding:12px 0;
-      display:flex; flex-wrap:wrap; justify-content:space-evenly; align-items:center;
-    }
-    .nav__list a{ display:block; padding:10px 8px; color:#1c1c1c; text-decoration:none; font-weight:800; letter-spacing:.2px; }
-    .nav__list a[aria-current="page"]{ text-decoration:underline; }
-
-    /* Hero */
-    .hero{
-      position:relative;
-      background:url("./assets/class.jpg") center/cover no-repeat;
-      min-height:300px;
-    }
-    .hero::before{
-      content:""; position:absolute; inset:0; background:rgba(0,0,0,.5);
-    }
-    .hero__title{
-      position:absolute; top:28px; left:28px;
-      margin:0;
-      font-size:3rem; font-weight:800; color:#fff;
-      text-shadow:0 2px 8px rgba(0,0,0,.35);
-    }
-
-    /* Page content */
-    main{ padding:40px 0 60px; text-align:center; }
-    main h2{ margin:0 0 28px; font-size:28px; letter-spacing:1px; }
-
-    /* Table */
-    table{ width:100%; border-collapse:collapse; margin:0 auto 30px; box-shadow:var(--shadow); }
-    th,td{ border:1px solid #444; padding:10px 12px; text-align:center; }
-    th{ background:var(--table-head); color:#fff; font-weight:700; }
-    td{ background:var(--table-row); color:var(--muted); }
-
-    /* Buttons */
-    .btn-row{ display:flex; justify-content:center; gap:20px; margin-top:20px; }
-    .btn{
-      display:inline-block; padding:12px 22px; border-radius:6px;
-      font-weight:700; text-decoration:none; color:#fff;
-      box-shadow:var(--shadow);
-    }
-    .btn.download{ background:#d33; }
-    .btn.join{ background:#c2185b; }
-
-    @media (max-width:720px){
-      .nav__toggle{ display:inline-block; background:transparent; border:0; font-size:24px; padding:12px }
-      .nav__list{ display:none; flex-direction:column; gap:14px; padding:10px 0; }
-      .nav.open .nav__list{ display:flex; }
-      table{ font-size:14px; }
-      .hero{ min-height:220px; }
-      .hero__title{ top:18px; left:18px; font-size:2.2rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Banner -->
   <header class="topbar">
     <div class="wrap">
-      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym header">
+      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner" />
     </div>
   </header>
 
-  <!-- Nav -->
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner">
       <button class="nav__toggle" aria-label="Toggle menu">☰</button>
@@ -102,15 +32,15 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1 class="hero__title">Schedules</h1>
+  <!-- HERO -->
+  <section class="hero hero--class">
+    <h1 class="hero__title"> Schedule</h1>
   </section>
 
-  <!-- Page content -->
   <main class="wrap">
-    <h2>Boxing Schedule</h2>
+    <h2>Weekly Boxing Schedule</h2>
 
+    <!-- Schedule Table -->
     <table>
       <thead>
         <tr>
@@ -125,69 +55,71 @@
       </thead>
       <tbody>
         <tr>
-          <td>6:00–7:00</td>
-          <td>Advanced Adult Training</td>
+          <td>06:00–07:00</td>
+          <td>Adults (24+)<br>Fitness & Conditioning</td>
           <td></td>
-          <td>Advanced Adult Training</td>
+          <td>Adults (24+)<br>Fitness & Conditioning</td>
           <td></td>
-          <td>Advanced Adult Training</td>
-          <td></td>
+          <td>Adults (24+)<br>Fitness & Conditioning</td>
+          <td>—</td>
         </tr>
         <tr>
-          <td>9:00–11:00</td>
+          <td>09:00–11:00</td>
+          <td>Kids (7–9)<br>Fundamentals</td>
           <td></td>
+          <td>Kids (7–9)<br>Pad Work</td>
           <td></td>
+          <td>Kids (7–9)<br>Movement & Games</td>
+          <td>Kids & Youth (7–13)<br>Open Training</td>
+        </tr>
+        <tr>
+          <td>11:00–13:00</td>
           <td></td>
+          <td>Teens (14–17)<br>Technical Skills</td>
+          <td>Teens (14–17)<br>Conditioning</td>
+          <td>Teens (14–17)<br>Sparring</td>
           <td></td>
-          <td></td>
-          <td>Introduction To Boxing (Beginners)</td>
+          <td>Teen Sparring Camp<br>(14–17)</td>
         </tr>
         <tr>
           <td>14:00–16:00</td>
-          <td>Kids Boxing</td>
-          <td>Kids Boxing</td>
-          <td>Kids Boxing</td>
-          <td>Kids Boxing</td>
-          <td>Kids Boxing</td>
+          <td>Youth (10–13)<br>Skills & Drills</td>
+          <td>Community Workshop<br>(Family Friendly)</td>
           <td></td>
+          <td>Community Workshop<br>(Family Friendly)</td>
+          <td>Youth (10–13)<br>Skills & Drills</td>
+          <td>Community Event<br>(Family Friendly)</td>
         </tr>
         <tr>
-          <td>11:00–1:00</td>
+          <td>16:30–18:00</td>
+          <td>All Ages<br>Open Training</td>
           <td></td>
+          <td>All Ages<br>Open Training</td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>Open Ring Sparring</td>
-        </tr>
-        <tr>
-          <td>16:30–17:00</td>
-          <td>Kids</td>
-          <td>Kids Boxing</td>
-          <td>Kids</td>
-          <td>Kids Boxing</td>
-          <td></td>
-          <td></td>
+          <td>All Ages<br>Open Training</td>
+          <td>All Ages<br>Open Training</td>
         </tr>
         <tr>
           <td>18:30–19:30</td>
-          <td>Community Boxing</td>
-          <td>Adults Fitness Boxing</td>
-          <td>Community Boxing</td>
-          <td>Adults Fitness Boxing</td>
-          <td>Community Boxing</td>
           <td></td>
+          <td>Adults & Teens<br>Fitness</td>
+          <td>Adults & Teens<br>Sparring</td>
+          <td>Adults & Teens<br>Fitness</td>
+          <td></td>
+          <td>—</td>
         </tr>
       </tbody>
     </table>
 
+    <!-- Buttons -->
     <div class="btn-row">
-      <a href="./assets/schedule.pdf" class="btn download">⬇ Download Schedule</a>
-      <a href="./join.html" class="btn join">Join Today</a>
+      <a class="btn download" href="./assets/boxingschedule.jpg" download>↓ Download Schedule</a>
+      <a class="btn join" href="./join.html">Join Today</a>
     </div>
   </main>
 
   <script>
+    // Mobile nav toggle
     const nav = document.querySelector('.nav');
     const toggle = document.querySelector('.nav__toggle');
     if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));

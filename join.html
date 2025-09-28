@@ -3,56 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About • Gloves Up Boxing Gym</title>
-  <link rel="icon" href="./assets/icon.jpg">
-  <style>
-    :root{
-      --bg:#111; --ink:#f4f4f4; --muted:#e6e6e6; --accent:#f6a79a;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --content-w:1100px;
-    }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
-    .wrap{ width:min(var(--content-w),96vw); margin:0 auto; }
-
-    /* Banner */
-    .topbar{ padding:24px 0 8px; }
-    .header-banner{ width:100%; height:auto; display:block; border-radius:12px; box-shadow:var(--shadow); }
-
-    /* Nav */
-    .nav{ background:var(--accent); position:sticky; top:0; z-index:5; }
-    .nav__inner{ width:min(var(--content-w),96vw); margin:0 auto; }
-    .nav__toggle{ display:none; }
-    .nav__list{
-      list-style:none; margin:0; padding:12px 0;
-      display:flex; flex-wrap:wrap; justify-content:space-evenly; align-items:center;
-    }
-    .nav__list a{
-      display:block; padding:10px 8px; color:#1c1c1c; text-decoration:none; font-weight:800; letter-spacing:.2px;
-    }
-
-    /* Page content */
-    main{ padding:28px 0 60px; }
-    main h1{ margin:0 0 12px; }
-    main p{ color:var(--muted); line-height:1.6; }
-
-    @media (max-width:720px){
-      .nav__toggle{ display:inline-block; background:transparent; border:0; font-size:24px; padding:12px }
-      .nav__list{ display:none; flex-direction:column; gap:14px; padding:10px 0; }
-      .nav.open .nav__list{ display:flex; }
-    }
-  </style>
+  <title>Join & Volunteer • Gloves Up Boxing Gym</title>
+  <link rel="icon" href="./assets/icon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Banner -->
   <header class="topbar">
     <div class="wrap">
-      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym header">
+      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner" />
     </div>
   </header>
 
-  <!-- Nav (same on every page) -->
+  <!-- Nav -->
   <nav class="nav">
     <div class="nav__inner">
       <button class="nav__toggle" aria-label="Toggle menu">☰</button>
@@ -60,7 +24,7 @@
         <li><a href="./home.html">Home</a></li>
         <li><a href="./about.html">About Us</a></li>
         <li><a href="./schedules.html">Schedules</a></li>
-        <li><a href="./join.html">Join Us</a></li>
+        <li><a href="./join.html" aria-current="page">Join Us</a></li>
         <li><a href="./donate.html">Donate</a></li>
         <li><a href="./stories.html">Stories</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -68,14 +32,111 @@
     </div>
   </nav>
 
-  <!-- Page content -->
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Join the Gym & Volunteer</h1>
+  </section>
+
   <main class="wrap">
-    <h1>join</h1>
-    <p>Write your page content here.</p>
+    <!-- VOLUNTEER: Why help -->
+    <section>
+      <h2>Volunteer with Gloves Up</h2>
+      <p class="intro">
+        We’re building a safe, disciplined space for young people. Your time and skills can change a life —
+        whether you coach, mentor, help with admin, or support events and fundraising.
+      </p>
+    </section>
+
+    <!-- VOLUNTEER: Roles -->
+    <section class="donate-options" aria-label="Volunteer roles">
+      <article class="option">
+        <h3>Assistant Coach</h3>
+        <p>Support lead coaches during classes: warm-ups, technique, pad work, and safety supervision.</p>
+        <a class="btn join" href="./contact.html">Apply</a>
+      </article>
+
+      <article class="option">
+        <h3>Youth Mentor</h3>
+        <p>Guide learners with study habits, goal setting, and life skills. Weekly or bi-weekly check-ins.</p>
+        <a class="btn join" href="./contact.html">Apply</a>
+      </article>
+
+      <article class="option">
+        <h3>Events & Fundraising</h3>
+        <p>Help plan showcases, sparring days, sponsor drives, and equipment fundraisers.</p>
+        <a class="btn join" href="./contact.html">Apply</a>
+      </article>
+
+      <article class="option">
+        <h3>Admin & Media</h3>
+        <p>Attendance logs, forms, parent comms, photos/videos, and social posts that celebrate progress.</p>
+        <a class="btn join" href="./contact.html">Apply</a>
+      </article>
+
+      <article class="option">
+        <h3>Equipment Support</h3>
+        <p>Source/maintain gloves, wraps, headgear, and ringside supplies. Coordinate donations.</p>
+        <a class="btn join" href="./donate.html">See How</a>
+      </article>
+    </section>
+
+    <!-- VOLUNTEER: Requirements & Process -->
+    <section>
+      <h2>Requirements & Process</h2>
+      <p class="intro">
+        Basic requirements include reliability, respect for safeguarding, and a willingness to learn our gym
+        standards. Coaching/mentoring roles may require background checks and shadow sessions.
+      </p>
+      <div class="btn-row">
+        <a class="btn join" href="./contact.html">Start Volunteer Application</a>
+        <a class="btn download" href="./assets/schedule.pdf">View Class Times</a>
+      </div>
+    </section>
+
+    <!-- JOIN: Membership plans -->
+    <section>
+      <h2>Join the Gym</h2>
+      <p class="intro">
+        New to boxing or returning to the ring, there’s a place for you. Choose a track and we’ll get you
+        training safely and consistently.
+      </p>
+    </section>
+
+    <section class="donate-options" aria-label="Membership options">
+      <article class="option">
+        <h3>Kids (8–16)</h3>
+        <p>Foundations, discipline, and confidence in a safe, supportive environment.</p>
+        <a class="btn join" href="./contact.html">Enquire</a>
+      </article>
+
+      <article class="option">
+        <h3>Adults – Fitness</h3>
+        <p>Technique + conditioning for real boxing skills and serious cardio.</p>
+        <a class="btn join" href="./contact.html">Enquire</a>
+      </article>
+
+      <article class="option">
+        <h3>Advanced / Sparring</h3>
+        <p>For experienced boxers refining ring craft and competition prep.</p>
+        <a class="btn join" href="./contact.html">Enquire</a>
+      </article>
+    </section>
+
+    <!-- JOIN: Access & assistance -->
+    <section>
+      <h2>Access & Assistance</h2>
+      <p class="intro">
+        We work to keep training accessible. Ask about sponsored places and loaner equipment where available.
+      </p>
+      <div class="btn-row">
+        <a class="btn join" href="./contact.html">Join Today</a>
+        <a class="btn download" href="./assets/schedule.pdf">⬇ Download Schedule</a>
+      </div>
+    </section>
   </main>
 
   <script>
-    // mobile menu toggle
+    // Mobile menu toggle
     const nav = document.querySelector('.nav');
     const toggle = document.querySelector('.nav__toggle');
     if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));

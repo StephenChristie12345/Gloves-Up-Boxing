@@ -5,67 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stories • Gloves Up Boxing Gym</title>
   <link rel="icon" href="./assets/icon.jpg">
-  <style>
-    :root{
-      --bg:#111; --ink:#f4f4f4; --muted:#e6e6e6; --accent:#f6a79a;
-      --shadow:0 10px 30px rgba(0,0,0,.35); --content-w:1000px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-    .wrap{width:min(var(--content-w),96vw);margin:0 auto;}
-
-    /* Banner */
-    .topbar{padding:24px 0 8px;}
-    .header-banner{width:100%;border-radius:12px;box-shadow:var(--shadow);display:block;}
-
-    /* Nav */
-    .nav{background:var(--accent);position:sticky;top:0;z-index:5;}
-    .nav__inner{width:min(var(--content-w),96vw);margin:0 auto;}
-    .nav__toggle{display:none;}
-    .nav__list{list-style:none;margin:0;padding:12px 0;
-      display:flex;justify-content:space-evenly;align-items:center;flex-wrap:wrap;}
-    .nav__list a{color:#1c1c1c;text-decoration:none;font-weight:800;padding:10px;}
-    .nav__list a[aria-current="page"]{text-decoration:underline;}
-
-    /* Hero */
-    .hero{position:relative;background:url("./assets/boxingring.jpg") center/cover no-repeat;
-      min-height:260px;display:flex;align-items:center;justify-content:center;}
-    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);}
-    .hero h1{position:relative;z-index:1;font-size:2.8rem;font-weight:800;color:#fff;text-align:center;}
-
-    /* Intro */
-    .intro{padding:40px 20px;text-align:center;}
-    .intro p{max-width:750px;margin:0 auto;color:var(--muted);line-height:1.6;}
-
-    /* Testimonials */
-    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;padding:20px;}
-    .card{background:#1c1c1c;padding:20px;border-radius:10px;box-shadow:var(--shadow);}
-    .card p{font-style:italic;line-height:1.5;margin-bottom:12px;}
-    .card h3{margin:0;font-size:1.1rem;color:var(--accent);}
-
-    /* Call to action */
-    .cta{text-align:center;padding:50px 20px;}
-    .cta a{display:inline-block;background:#e63946;color:#fff;font-weight:700;
-      padding:14px 26px;border-radius:6px;text-decoration:none;box-shadow:var(--shadow);}
-    .cta a:hover{background:#c82333;}
-
-    @media(max-width:720px){
-      .nav__toggle{display:inline-block;background:transparent;border:0;font-size:24px;padding:12px}
-      .nav__list{display:none;flex-direction:column;gap:12px;padding:10px 0;}
-      .nav.open .nav__list{display:flex;}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Banner -->
-  <header class="topbar">
-    <div class="wrap">
-      <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner">
-    </div>
-  </header>
+<header class="topbar">
+  <div class="wrap">
+    <img class="header-banner" src="./assets/banner.jpg" alt="Gloves Up Boxing Gym banner">
+  </div>
+</header>
+
 
   <!-- Nav -->
   <nav class="nav">
@@ -83,39 +33,50 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Stories & Testimonials</h1>
+  <!-- Hero banner -->
+  <section class="hero hero--stories">
+    <h1 class="hero__title">Testimonials & Success Stories</h1>
   </section>
 
-  <!-- Intro -->
-  <section class="intro">
-    <p>Every punch thrown in our ring tells a story of resilience and hope. Here are the voices of the young athletes, parents, and mentors who have found strength through Gloves Up Boxing Gym.</p>
-  </section>
+  <main>
+    <!-- Intro -->
+    <div class="intro">
+      <p>Gloves Up is more than a boxing gym — it’s a place of transformation. Here are stories from our members, parents, and volunteers about the impact boxing and mentorship have made in their lives.</p>
+    </div>
 
-  <!-- Testimonial cards -->
-  <section class="testimonials wrap">
-    <div class="card">
-      <p>“Before joining Gloves Up, I struggled with staying out of trouble. Now I have a community that supports me and I’ve learned discipline through boxing.”</p>
-      <h3>– Thabo, Student</h3>
-    </div>
-    <div class="card">
-      <p>“The gym gave my daughter a safe place after school. She’s gained confidence, new friends, and life skills that will stay with her forever.”</p>
-      <h3>– Lerato, Parent</h3>
-    </div>
-    <div class="card">
-      <p>“Being a coach here is more than teaching boxing. It’s about guiding young people to find their voice and purpose.”</p>
-      <h3>– Coach Sipho</h3>
-    </div>
-  </section>
+    <!-- Visual + Stories Grid -->
+    <div class="testimonials">
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Have a story to share?</h2>
-    <a href="./contact.html">Contact Us</a>
-  </section>
+      <!-- Story card with image -->
+      <div class="card">
+        <img src="./assets/dadson.jpg" alt="Old School Boxing Club" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+        <p>“My son joined when he was shy and struggling at school. A year later, he’s confident, disciplined, and has a new set of friends who support him.”</p>
+        <h3>— Parent of a Gloves Up Kid</h3>
+      </div>
+
+      <div class="card">
+        <img src="./assets/gang.jpg" alt="Group of kids smiling" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+        <p>“Boxing teaches more than how to throw a punch. It teaches patience, respect, and how to carry yourself in life. That’s what I try to hand down to every young fighter who comes here.”</p>
+        <h3>— Senior Coach</h3>
+      </div>
+
+      <div class="card">
+        <img src="./assets/boy.jpg" alt="Coach mentoring young boxer" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+        <p>“Boxing gave me focus. Instead of hanging out on the streets after school, I come here, train hard, and feel proud of myself.”</p>
+        <h3>— Teen Member</h3>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="cta">
+      <h2>Share Your Story</h2>
+      <p>Have Gloves Up made a difference in your life? Share your journey with us so we can inspire others to join.</p>
+      <a href="./contact.html">Send Us Your Story</a>
+    </div>
+  </main>
 
   <script>
+    // mobile menu toggle
     const nav = document.querySelector('.nav');
     const toggle = document.querySelector('.nav__toggle');
     if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));

@@ -31,8 +31,6 @@
       </ul>
     </div>
   </nav>
-
-  <!-- No hero image by request -->
   <main class="wrap" style="text-align:left;">
     <h1>Join the Gym</h1>
     <p class="intro" style="text-align:left;">
@@ -41,13 +39,12 @@
       discipline for younger boxers. If cost is a barrier, speak to us about sponsored places and loaner kit.
     </p>
 
-    <!-- A couple of images (inline, no cards) -->
     <div class="gallery-2" aria-label="Training photos">
       <img src="./assets/donation.jpg" alt="Kids training at Gloves Up">
       <img src="./assets/youngboxers.jpg" alt="Coach leading a footwork session">
     </div>
 
-    <!-- Categories: Kids / Adults / Advanced (simple list, not cards) -->
+    <!-- Categories: Kids / Adults / Advanced -->
     <section aria-label="Membership tracks">
       <ul class="join-categories">
         <li>
@@ -60,9 +57,9 @@
           <div class="btn-row" style="justify-content:flex-start;">
             <a class="btn join" href="./contact.html" aria-label="Enquire about Kids classes">Enquire</a>
             <a class="btn download"
-               href="./assets/boxingschedule.jpg"
-               download="GlovesUp-Weekly-Schedule.jpg"
-               aria-label="Download class times image">
+            href="./assets/boxingschedule.jpg"
+            download="GlovesUp-Weekly-Schedule.jpg"
+           aria-label="Download class times image">
               ⬇ Class Times
             </a>
           </div>
@@ -94,7 +91,7 @@
 
     <hr style="border:0;border-top:1px solid #333;margin:2rem 0;" />
 
-    <!-- Volunteer (specific streams, now includes Assistant Coach) -->
+    <!-- Volunteer-->
     <h2>Volunteer with Purpose</h2>
     <p class="small">
       We don’t do broad “help wherever” roles. We plug skills directly into what the kids need each week.
@@ -131,7 +128,7 @@
     </div>
   </main>
 
-  <!-- ===== Accessible Modal (Volunteer Application) ===== -->
+  <!--Volunteer Application -->
   <div class="modal" id="apply-modal" aria-hidden="true">
     <div class="modal__overlay" data-close></div>
     <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-describedby="apply-desc">
@@ -153,7 +150,7 @@
         <div class="form-row">
           <label for="app-phone">Phone</label>
           <input id="app-phone" name="phone" type="tel" inputmode="tel"
-                 pattern="[0-9()+\\-\\s]{7,}" placeholder="+27 82 123 4567" required />
+                       pattern="[0-9()+\\-\\s]{7,}" placeholder="+27 82 123 4567" required />
         </div>
 
         <div class="form-row">
@@ -229,7 +226,7 @@
       if (e.target.classList.contains('modal__overlay')) closeModal();
     });
 
-    // Submit → compose email (no backend needed)
+    // Submit → compose email 
     const form = document.getElementById('apply-form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();

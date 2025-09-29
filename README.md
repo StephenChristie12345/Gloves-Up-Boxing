@@ -1,108 +1,113 @@
-Gloves Up Boxing Gym Website
-Project Overview
+Gloves Up Boxing Gym Website 
 
-This repository contains the foundation for the Gloves Up Boxing Gym website. Gloves Up is a non-profit organisation in Cape Town that uses boxing, mentorship, and life skills development to support youth aged 8–24 from high-risk communities.
+Project Overview 
 
-The website provides a credible, centralised platform for parents, youth, donors, and volunteers to:
+This repository contains the foundation for the Gloves Up Boxing Gym website. Gloves Up is a non-profit organisation in Cape Town that uses boxing, mentorship, and life skills development to support youth aged 8–24 from high-risk communities. 
 
-Learn more about the organisation.
+The website provides a credible, centralised platform for parents, youth, donors, and volunteers to: 
 
-Enrol in programmes.
+Learn more about the organisation. 
 
-Volunteer as mentors and coaches.
+Enrol in programmes. 
 
-Support the cause through donations.
+Volunteer as mentors and coaches. 
 
-Goals & Objectives
+Support the cause through donations. 
 
-Programme Enrolment: Generate 40+ youth enrolment enquiries per month.
+ 
 
-Volunteer Recruitment: Attract 10+ volunteer mentor/coach applications per quarter.
+Goals & Objectives 
 
-Donor Engagement: Convert at least 3% of visitors into donors (1% recurring monthly donors).
+Programme Enrolment: Generate 40+ youth enrolment enquiries per month. 
 
-Awareness: Reach 2,000+ unique monthly visitors with an average session time of 90+ seconds.
+Volunteer Recruitment: Attract 10+ volunteer mentor/coach applications per quarter. 
 
-Community Updates: Build an email newsletter subscriber list of 1,000+ with open rates of 30%+.
+Donor Engagement: Convert at least 3% of visitors into donors (1% recurring monthly donors). 
 
-Key Performance Indicators (KPIs)
+Awareness: Reach 2,000+ unique monthly visitors with an average session time of 90+ seconds. 
 
-Number of form submissions (youth enrolment, volunteer, donations).
+Community Updates: Build an email newsletter subscriber list of 1,000+ with open rates of 30%+. 
 
-Donation page conversion rates.
+ 
 
-Newsletter sign-ups and engagement rates.
+Key Performance Indicators (KPIs) 
 
-Visitor analytics (traffic sources, bounce rate, average time on site).
+Number of form submissions (youth enrolment, volunteer, donations). 
 
-Features
+Donation page conversion rates. 
 
-Home Page: Hero statement, impact statistics, calls-to-action (Join, Donate, Volunteer), testimonials.
+Newsletter sign-ups and engagement rates. 
 
-About Us Page: Founders’ story, mission, vision, safeguarding summary, and coach bios.
+Visitor analytics (traffic sources, bounce rate, average time on site). 
 
-Programmes / Schedules Page: Training timetables, age group details, FAQs, downloadable PDF resources.
+ 
 
-Join Us Page: Youth enrolment form and volunteer mentor application form.
+Features 
 
-Donate Page: Bank details, QR codes, sponsor-a-child options, donation breakdown.
+Home Page: Hero statement, impact statistics, calls-to-action (Join, Donate, Volunteer), testimonials. 
 
-Stories & News Page: Youth success stories, testimonials, photos, organisational updates.
+About Us Page: Founders’ story, mission, vision, safeguarding summary, and coach bios. 
 
-Contact Page: Map embed, WhatsApp, phone, email, and social media links.
+Programmes / Schedules Page: Training timetables, age group details, FAQs, downloadable PDF resources. 
 
-Changelog (3-Week Development Log)
-Week 1 – Structure and Base Styling
+Join Us Page: Youth enrolment form and volunteer mentor application form. 
 
-Day 1: GitHub repo created, folder structure set up, skeleton HTML for all pages. Linked external styles.css.
-Day 2: Global CSS variables added (--bg, --ink, --accent). Applied base styles (dark theme, typography). Built navigation bar with Flexbox.
-Day 3: Home hero section with background image overlay and text. clamp() typography scaling. Created button system with pseudo-class hover/focus states.
+Donate Page: Bank details, QR codes, sponsor-a-child options, donation breakdown. 
 
-Week 2 – Layouts, Components, and Decoration
+Stories & News Page: Youth success stories, testimonials, photos, organisational updates. 
 
-Day 4: Implemented CSS Grid for Join gallery, Stories testimonials, and Contact cards. Flexbox for button rows. Section spacing standardised.
-Day 5: Styled schedules table (borders, alternating rows, shadows). Added rounded corners and shadows to cards, images, and buttons. Set consistent typography hierarchy.
-Day 6: Completed testimonial cards with images and quotes. Added Stories page CTA section. Designed Donate options grid with CTA buttons.
+Contact Page: Map embed, WhatsApp, phone, email, and social media links. 
 
-Week 3 – Responsive Design, Fixes, and Final Improvements
+ 
 
-Day 7: Added media queries for tablet/mobile. Navigation collapses into toggle. Hero sections scale down on smaller screens.
-Day 8: Fixed Join gallery cropping (object-fit:contain). Restored CTA button in Stories. Reapplied .c-card styles for Contact page sections.
-Day 9: Increased Google Maps iframe height. Adjusted Stories card image to prevent cropped heads. Final responsive testing across desktop/tablet/mobile. Pushed final descriptive commits to GitHub.
+Changelog (3-Week Development Log) 
 
-Technologies Used
+Week 1 – Structure and Base Styling 
 
-HTML5 – semantic structure with header, nav, main, section.
+Day 1: GitHub repo created, folder structure set up, skeleton HTML for all pages. Linked external styles.css. 
+Day 2: Global CSS variables added (--bg, --ink, --accent). Applied base styles (dark theme, typography). Built navigation bar with Flexbox. 
+Day 3: Home hero section with background image overlay and text. clamp() typography scaling. Created button system with pseudo-class hover/focus states. 
 
-CSS3 – external stylesheet with Flexbox, Grid, pseudo-classes, variables, shadows, media queries.
+Week 2 – Layouts, Components, and Decoration 
 
-Git & GitHub – version control with multiple commits.
+Day 4: Implemented CSS Grid for Join gallery, Stories testimonials, and Contact cards. Flexbox for button rows. Section spacing standardised. 
+Day 5: Styled schedules table (borders, alternating rows, shadows). Added rounded corners and shadows to cards, images, and buttons. Set consistent typography hierarchy. 
+Day 6: Completed testimonial cards with images and quotes. Added Stories page CTA section. Designed Donate options grid with CTA buttons. 
 
-References
+Week 3 – Responsive Design, Fixes, and Final Improvements 
 
-Pinterest (2025). Image from pin 864480091016277543 [online image]. Available at: https://za.pinterest.com/pin/864480091016277543/
- (Accessed: 29 September 2025).
+Day 7: Added media queries for tablet/mobile. Navigation collapses into toggle. Hero sections scale down on smaller screens. 
+Day 8: Fixed Join gallery cropping (object-fit:contain). Restored CTA button in Stories. Reapplied .c-card styles for Contact page sections. 
+Day 9: Increased Google Maps iframe height. Adjusted Stories card image to prevent cropped heads. Final responsive testing across desktop/tablet/mobile. Pushed final descriptive commits to GitHub. 
 
-Pinterest (2025). Image from pin 864480091016276384 [online image]. Available at: https://za.pinterest.com/pin/864480091016276384/
- (Accessed: 29 September 2025).
+ 
 
-Pinterest (2025). Image from pin 864480091016276347 [online image]. Available at: https://za.pinterest.com/pin/864480091016276347/
- (Accessed: 29 September 2025).
+Technologies Used 
 
-Pinterest (2025). Image from pin 864480091016275987 [online image]. Available at: https://za.pinterest.com/pin/864480091016275987/
- (Accessed: 29 September 2025).
+HTML5 – semantic structure with header, nav, main, section. 
 
-Pinterest (2025). Image from pin 864480091016275812 [online image]. Available at: https://za.pinterest.com/pin/864480091016275812/
- (Accessed: 29 September 2025).
+CSS3 – external stylesheet with Flexbox, Grid, pseudo-classes, variables, shadows, media queries. 
 
-Pinterest (2025). Image from pin 864480091016275804 [online image]. Available at: https://za.pinterest.com/pin/864480091016275804/
- (Accessed: 29 September 2025).
+Git & GitHub – version control with multiple commits. 
 
-Pinterest (2025). Image from pin 864480091016247058 [online image]. Available at: https://za.pinterest.com/pin/864480091016247058/
- (Accessed: 29 September 2025).
+ 
 
-Pinterest (2025). Image from pin 864480091016116776 [online image]. Available at: https://za.pinterest.com/pin/864480091016116776/
- (Accessed: 29 September 2025).
+References 
 
-Pinterest (2025). Image from pin 864480091016200693 [online image]. Available at: https://za.pinterest.com/pin/864480091016200693/
- (Accessed: 29 September 2025).
+Pinterest (2025). Image from pin 864480091016277543 [online image]. Available at: https://za.pinterest.com/pin/864480091016277543/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016276384 [online image]. Available at: https://za.pinterest.com/pin/864480091016276384/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016276347 [online image]. Available at: https://za.pinterest.com/pin/864480091016276347/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016275987 [online image]. Available at: https://za.pinterest.com/pin/864480091016275987/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016275812 [online image]. Available at: https://za.pinterest.com/pin/864480091016275812/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016275804 [online image]. Available at: https://za.pinterest.com/pin/864480091016275804/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016247058 [online image]. Available at: https://za.pinterest.com/pin/864480091016247058/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016116776 [online image]. Available at: https://za.pinterest.com/pin/864480091016116776/ (Accessed: 29 September 2025). 
+
+Pinterest (2025). Image from pin 864480091016200693 [online image]. Available at:

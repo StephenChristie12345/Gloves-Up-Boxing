@@ -225,3 +225,127 @@ main h2{ margin:0 0 1.375rem; font-size:var(--h2); }
   border:0;
   display:block;
 }
+
+/* Hover zoom effect for gallery images */
+.gallery-2 img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+@media (hover: hover) {
+  .gallery-2 img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+}
+/* Hover zoom effect for about page cards */
+.about-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Stories: symmetric expand-on-hover for the 3 cards */
+@media (hover: hover) and (min-width: 60em) {
+  .testimonials{
+    display: grid;                         /* ensure 3 fixed columns on desktop */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-3);
+    transition: grid-template-columns .30s ease;   /* animate the column resizing */
+  }
+  .testimonials .card{
+    transition: transform .30s ease, box-shadow .30s ease;
+    will-change: transform;
+  }
+  .testimonials .card:hover{
+    transform: scale(1.08);                /* a bit bigger than before */
+    box-shadow: 0 16px 36px rgba(0,0,0,.45);
+    position: relative;                    /* keep above neighbors while animating */
+    z-index: 1;
+  }
+
+  /* Reflow columns based on WHICH card is hovered (no overlap, symmetrical push) */
+  .testimonials:has(.card:nth-child(1):hover){
+    grid-template-columns: 1.8fr .8fr .8fr;
+  }
+  .testimonials:has(.card:nth-child(2):hover){
+    grid-template-columns: .8fr 1.8fr .8fr;
+  }
+  .testimonials:has(.card:nth-child(3):hover){
+    grid-template-columns: .8fr .8fr 1.8fr;
+  }
+}
+
+/* Optional: nice behavior on medium screens; keep it simple on mobile */
+@media (hover: hover) and (min-width: 45em) and (max-width: 60em){
+  .testimonials{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-3);
+  }
+  .testimonials .card:hover{
+    transform: scale(1.05);
+  }
+}
+/* 1) Softer column widen so images don't get blown out */
+@media (hover: hover) and (min-width: 60em) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: grid-template-columns .30s ease;
+  }
+  /* make the widened column less extreme (was 1.8fr) */
+  .testimonials:has(.card:nth-child(1):hover){ grid-template-columns: 1.6fr .9fr .9fr; }
+  .testimonials:has(.card:nth-child(2):hover){ grid-template-columns: .9fr 1.6fr .9fr; }
+  .testimonials:has(.card:nth-child(3):hover){ grid-template-columns: .9fr .9fr 1.6fr; }
+
+  /* keep the lift, but not too huge */
+  .testimonials .card { transition: transform .30s ease, box-shadow .30s ease; }
+  .testimonials .card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 16px 36px rgba(0,0,0,.45);
+  }
+}
+
+/* 2) Lock the image to a fixed 'frame' that stays centered (no stretch) */
+.testimonials .card img {
+  display: block;
+  width: 100%;
+  /* Give the image a stable frame; change 16/10 to 4/3 or 3/2 if your shots are taller/wider */
+  aspect-ratio: 16 / 10;
+  object-fit: contain;        /* show the whole image without cropping */
+  object-position: center;    /* keep the subject centered */
+  background: #000;           /* subtle letterboxing on sides/top when needed */
+  border-radius: .5rem;       /* keep your existing rounding */
+}
+
+/* 3) Optional: cap image width so it never gets too large on very wide screens */
+@media (min-width: 75em) {
+  .testimonials .card img {
+    max-width: 560px;
+    margin-inline: auto;  /* keep the image centered inside the wider card */
+  }
+}
+/* STORIES — make images fill the frame (no black bars) */
+.testimonials .card { 
+  overflow: hidden;                    /* keeps scaled image neatly clipped inside the card */
+}
+
+.testimonials .card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;                /* consistent, cinematic frame; change to 3/2 if you prefer taller */
+  object-fit: cover !important;        /* fill the box and crop edges instead of letterboxing */
+  object-position: center;             /* keep subject centered */
+  background: transparent;             /* remove the black letterbox background */
+}
+
+/* Optional per-image fine-tuning (use if a subject sits high/low in the shot) */
+.testimonials .card img[src$="boy.jpg"]  { object-position: center top; }
+.testimonials .card img[src$="dadson.jpg"] { object-position: center; }
+.testimonials .card img[src$="gang.jpg"]   { object-position: 50% 55%; } /* nudges focus slightly down */

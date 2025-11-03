@@ -7,28 +7,28 @@
   <link rel="icon" href="./assets/icon.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
   <!-- SEO Meta -->
-<title>Class Schedule • Gloves Up Boxing Gym</title>
-<meta name="description" content="View the weekly class schedule for kids, teens, and adults at Gloves Up Boxing Gym in Cape Town. Download the latest timetable and start training." />
-<link rel="canonical" href="https://example.org/schedules.html">
-<meta name="author" content="Gloves Up Boxing Gym">
-<meta name="robots" content="index, follow">
+  <title>Class Schedule • Gloves Up Boxing Gym</title>
+  <meta name="description" content="View the weekly class schedule for kids, teens, and adults at Gloves Up Boxing Gym in Cape Town. Download the latest timetable and start training." />
+  <link rel="canonical" href="https://example.org/schedules.html">
+  <meta name="author" content="Gloves Up Boxing Gym">
+  <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Gloves Up Boxing Gym">
-<meta property="og:title" content="Class Schedule – Gloves Up Boxing Gym">
-<meta property="og:description" content="Find out when kids, teens, and adults can join boxing sessions at Gloves Up. Updated weekly schedule.">
-<meta property="og:url" content="https://example.org/schedules.html">
-<meta property="og:image" content="https://example.org/assets/class.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gloves Up Boxing Gym">
+  <meta property="og:title" content="Class Schedule – Gloves Up Boxing Gym">
+  <meta property="og:description" content="Find out when kids, teens, and adults can join boxing sessions at Gloves Up. Updated weekly schedule.">
+  <meta property="og:url" content="https://example.org/schedules.html">
+  <meta property="og:image" content="https://example.org/assets/class.jpg">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Class Schedule – Gloves Up Boxing Gym">
-<meta name="twitter:description" content="Browse the latest schedule to start your boxing journey with Gloves Up.">
-<meta name="twitter:image" content="https://example.org/assets/class.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Class Schedule – Gloves Up Boxing Gym">
+  <meta name="twitter:description" content="Browse the latest schedule to start your boxing journey with Gloves Up.">
+  <meta name="twitter:image" content="https://example.org/assets/class.jpg">
 
   <!-- Banner -->
   <header class="topbar">
@@ -135,74 +135,88 @@
     <!-- Buttons -->
     <div class="btn-row">
       <a class="btn download" href="./assets/boxingschedule.jpg" download>↓ Download Schedule</a>
-      <a class="btn join" href="./join.html">Join Today</a>
+      <button class="btn join" id="open-join-modal" type="button">Join Today</button>
     </div>
   </main>
 
-  <script>
-    // Mobile nav toggle
-    const nav = document.querySelector('.nav');
-    const toggle = document.querySelector('.nav__toggle');
-    if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
-  <!-- === Join Form Modal — ADDITION (no changes to existing content) === -->
-<div
-  class="modal"
-  id="join-modal"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="joinModalTitle"
-  aria-describedby="joinModalDesc"
-  hidden
->
-  <div class="modal__overlay" data-modal-close></div>
+  <!-- ==== Modal Form: Join a Class ==== -->
+  <div class="modal" id="join-modal" aria-hidden="true" hidden>
+    <div class="modal__overlay" data-modal-close></div>
 
-  <div class="modal__dialog" role="document" tabindex="-1">
-    <button class="modal__close" type="button" aria-label="Close" data-modal-close>&times;</button>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle" aria-describedby="joinModalDesc">
+      <button class="modal__close" type="button" aria-label="Close" data-modal-close>×</button>
 
-    <h2 id="joinModalTitle">Join Gloves Up</h2>
-    <p id="joinModalDesc" class="muted">Fill in your details and we’ll get in touch with next steps.</p>
+      <h2 id="joinModalTitle">Join Gloves Up</h2>
+      <p id="joinModalDesc" class="small">Fill in your details and pick a session. We’ll generate a downloadable receipt.</p>
 
-    <form id="joinForm" novalidate>
-      <div class="form-row">
-        <label for="jf-name">Full Name</label>
-        <input id="jf-name" name="name" type="text" placeholder="e.g. Stephen Christie" required />
-        <small class="error" id="err-name" aria-live="polite"></small>
-      </div>
+      <form id="joinForm" novalidate>
+        <div class="form-row">
+          <label for="jf-name">Full Name</label>
+          <input id="jf-name" name="name" type="text" placeholder="e.g. Stephen Christie" required />
+          <small class="error" id="err-name" aria-live="polite"></small>
+        </div>
 
-      <div class="form-row">
-        <label for="jf-email">Email</label>
-        <input id="jf-email" name="email" type="email" placeholder="e.g. you@example.com" required />
-        <small class="error" id="err-email" aria-live="polite"></small>
-      </div>
+        <div class="form-row">
+          <label for="jf-email">Email</label>
+          <input id="jf-email" name="email" type="email" placeholder="you@example.com" required />
+          <small class="error" id="err-email" aria-live="polite"></small>
+        </div>
 
-      <div class="form-row">
-        <label for="jf-age">Age Group</label>
-        <select id="jf-age" name="age" required>
-          <option value="">Select one…</option>
-          <option value="Kids">Kids (6–13)</option>
-          <option value="Teens">Teens (14–17)</option>
-          <option value="Adults">Adults (18+)</option>
-        </select>
-        <small class="error" id="err-age" aria-live="polite"></small>
-      </div>
+        <div class="form-row">
+          <label for="jf-age">Age Group</label>
+          <select id="jf-age" name="age" required>
+            <option value="">Select one…</option>
+            <option>Kids (7–9)</option>
+            <option>Youth (10–13)</option>
+            <option>Teens (14–17)</option>
+            <option>Adults (24+)</option>
+            <option>Adults & Teens (Mixed)</option>
+            <option>All Ages</option>
+          </select>
+          <small class="error" id="err-age" aria-live="polite"></small>
+        </div>
 
-      <div class="form-row">
-        <label for="jf-msg">Message <span class="muted">(optional)</span></label>
-        <textarea id="jf-msg" name="message" rows="3" maxlength="200" placeholder="Anything we should know? (max 200 chars)"></textarea>
-        <small class="hint" id="hint-msg">0 / 200</small>
-      </div>
+        <div class="form-row">
+          <label for="jf-day">Preferred Day</label>
+          <select id="jf-day" name="day" required>
+            <option value="">Select a day…</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+          </select>
+          <small class="error" id="err-day" aria-live="polite"></small>
+        </div>
 
-      <div class="form-row" style="margin-top:.75rem;">
-        <button type="submit" id="jf-submit" class="btn" disabled>Send</button>
-      </div>
+        <div class="form-row">
+          <label for="jf-slot">Time & Class</label>
+          <select id="jf-slot" name="slot" required disabled>
+            <option value="">Select a day first…</option>
+          </select>
+          <small class="error" id="err-slot" aria-live="polite"></small>
+        </div>
 
-      <p id="jf-success" class="success" hidden>
-        🎉 Thanks for joining Gloves Up! We’ll be in touch soon.
-      </p>
-    </form>
+        <div class="form-row">
+          <label for="jf-msg">Message <span class="muted">(optional)</span></label>
+          <textarea id="jf-msg" name="message" rows="3" maxlength="200" placeholder="Anything we should know? (max 200 chars)"></textarea>
+          <small class="hint" id="hint-msg">0 / 200</small>
+          <small class="error" id="err-msg" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row" style="margin-top:.75rem;">
+          <!-- Note: no disabled attr; we validate on submit -->
+          <button type="submit" id="jf-submit" class="btn">Download PDF Receipt</button>
+        </div>
+
+        <p id="jf-success" class="success" hidden>
+          🎉 Your booking receipt is being generated.
+        </p>
+      </form>
+    </div>
   </div>
-</div>
+
 <footer class="footer">
   <div class="footer-content">
     <p>&copy; 2025 Gloves Up Boxing Gym. All rights reserved.</p>
@@ -225,7 +239,12 @@
     </div>
   </div>
 </footer>
-<a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
 
+  <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+
+  <!-- PDF library (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" integrity="sha384-H6R7mVJ7CwBMG6T8Y0dr7r1c+TQK2P8d8qW9lq0v/6Yw9q9MBdHnA9Y6d9Pz4E6M" crossorigin="anonymous"></script>
+  <!-- Your main JS -->
+  <script src="assets/main.js"></script>
 </body>
 </html>

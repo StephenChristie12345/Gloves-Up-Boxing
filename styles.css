@@ -322,3 +322,8 @@ html{ scroll-behavior:smooth; }
   transition:opacity .2s ease, transform .2s ease; z-index:999;
 }
 .back-to-top:hover{ opacity:1; transform:translateY(-3px); }
+
+.form-row.invalid input,
+.form-row.invalid select,
+.form-row.invalid textarea { outline: 2px solid #ef4444; }
+.form-row .error { display:block; color:#ef4444; font-size:.85rem; margin-top:.35rem; }

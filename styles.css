@@ -349,3 +349,65 @@ main h2{ margin:0 0 1.375rem; font-size:var(--h2); }
 .testimonials .card img[src$="boy.jpg"]  { object-position: center top; }
 .testimonials .card img[src$="dadson.jpg"] { object-position: center; }
 .testimonials .card img[src$="gang.jpg"]   { object-position: 50% 55%; } /* nudges focus slightly down */
+/* Footer Styles */
+.footer {
+  background: var(--brand-dark, #1e1e1e);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.footer-socials .social {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.footer-socials .social:hover,
+.footer-socials .social:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-socials .social svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
